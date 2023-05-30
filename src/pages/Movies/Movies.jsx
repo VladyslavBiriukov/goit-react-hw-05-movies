@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import SearchForm from '../../components/SearchForm/SearchForm';
+import SearchForm from 'components/SearchForm/SearchForm';
 import { TheMovieDbAPI } from 'components/services/api';
 import { MovieList } from './Movies.styled';
 import { MoviesList } from 'components/MoviesList/MoviesList';
@@ -14,7 +14,7 @@ function Movies() {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const searchQuery = searchParams.get('querry');
+    const searchQuery = searchParams.get('query');
     theMovieDbAPI.query = searchQuery;
 
     useEffect(() => {
