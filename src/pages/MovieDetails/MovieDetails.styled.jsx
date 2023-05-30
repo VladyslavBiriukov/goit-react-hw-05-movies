@@ -23,9 +23,10 @@ export const Title = styled.h3`
 margin-left: 50px;
 `;
 export const LinkStyled = styled(Link)`
-margin-left: 50px;
+margin-left: 20px;
 display: inline-block;
-  background-color: #f39c1c;
+  background: rgb(183,76,255);
+  background: linear-gradient(90deg, rgba(183,76,255,1) 0%, rgba(94,88,255,1) 50%, rgba(247,122,254,1) 100%);
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -34,17 +35,44 @@ display: inline-block;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.25rem;
-  transition: background-color 0.2s ease;
+  transition:  0.2s ease-in-out;
 
   &:hover {
-    background-color: #818080;
+    background: rgb(122,28,186);
+    background: linear-gradient(90deg, rgba(122,28,186,1) 0%, rgba(39,34,173,1) 34%, rgba(27,244,255,1) 100%);
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   }
 
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    background: rgb(122,28,186);
+    background: linear-gradient(90deg, rgba(122,28,186,1) 0%, rgba(39,34,173,1) 34%, rgba(27,244,255,1) 100%);
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   }
 `;
 export const NavLinkStyled = styled(NavLink)`
-margin-left: 50px;
+color: black;
+text-decoration: none;
+display: block;
+width: 100px;
+background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+&:hover {
+  background-size: 0 3px, 100% 3px;
+}
 `;

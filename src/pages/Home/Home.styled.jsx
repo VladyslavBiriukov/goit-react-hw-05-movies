@@ -10,3 +10,9 @@ export const MovieList = styled.ul`
   display: flex;
   flex-wrap: wrap;
 `;
+
+export const MainText = styled.h2`
+display: block;
+margin-left: 25px;
+ color: #2722ad;
+`

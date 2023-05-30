@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Title = styled.h2`
+display: block;
 margin-left: 50px;
 margin-bottom: 10px;
+text-decoration: none;
 `;
 
 export const CastList = styled.ul`
@@ -18,7 +20,10 @@ margin-bottom: 10px;
 width: 10%;
 `;
 export const Block = styled.div`
-border: 3px solid orange;
+border: 3px solid #2722ad;
+width: 95%;
+margin: auto;
+border-radius: 6px;
 margin-bottom: 10px;
 margin-top: 10px;
 

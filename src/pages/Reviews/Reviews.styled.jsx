@@ -16,7 +16,10 @@ export const RevievsItem = styled.li`
 margin-bottom: 10px;
 `;
 export const Block = styled.div`
-border: 3px solid orange;
+border: 3px solid #2722ad;
+width: 80%;
+margin: auto;
+border-radius: 6px;
 margin-bottom: 10px;
 margin-top: 10px;
 
