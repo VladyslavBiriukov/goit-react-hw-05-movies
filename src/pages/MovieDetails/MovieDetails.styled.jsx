@@ -21,6 +21,7 @@ width: 500px;
 
 export const Title = styled.h3`
 margin-left: 50px;
+margin-bottom: 10px;
 `;
 export const LinkStyled = styled(Link)`
 margin-left: 20px;
@@ -51,6 +52,7 @@ display: inline-block;
 `;
 export const NavLinkStyled = styled(NavLink)`
 color: black;
+margin-left: 20px;
 text-decoration: none;
 display: block;
 width: 100px;
@@ -73,6 +75,8 @@ background:
 }
 
 &:hover {
+  text-shadow: 3px 3px 20px #00bbff, -2px 1px 30px #00bbff;
+  color: #2722ad;
   background-size: 0 3px, 100% 3px;
 }
 `;
