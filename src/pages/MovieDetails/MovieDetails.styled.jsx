@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Block = styled.div`
 display: flex;
@@ -50,7 +50,7 @@ display: inline-block;
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   }
 `;
-export const NavLinkStyled = styled(NavLink)`
+export const NavLinkStyled = styled(Link)`
 color: black;
 margin-left: 20px;
 text-decoration: none;

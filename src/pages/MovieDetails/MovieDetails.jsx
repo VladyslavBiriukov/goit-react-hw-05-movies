@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TheMovieDbAPI } from 'components/services/api';
-import { useParams, Routes, Route, useLocation } from 'react-router-dom';
-import { Cast } from 'pages/Cast/Cast';
-import { Reviews } from 'pages/Reviews/Reviews';
+import { useParams,  useLocation, Outlet, Navigate } from 'react-router-dom';
+import { Suspense } from "react";
 import { Loader } from 'components/Loader/Loader';
 import {
   Block,
@@ -66,7 +65,7 @@ function MovieDetails() {
                     </InfoBlock>
                 </Block>
             )}
-            {error && <p>Error{error}</p>}
+            {error && <Navigate to="/movies" />}
             <Title>Additional information</Title>
             <ul>
                 <li>
@@ -86,11 +85,9 @@ function MovieDetails() {
                     </NavLinkStyled>
                 </li>
             </ul>
-
-            <Routes>
-                <Route path="cast" element={<Cast />} />
-                <Route path="reviews" element={<Reviews />} />
-            </Routes>
+            <Suspense fallback={<Loader />}>
+                <Outlet />
+            </Suspense>
         </>
     );
 

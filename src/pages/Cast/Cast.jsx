@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { useState, useEffect } from 'react';
 import { TheMovieDbAPI } from 'components/services/api';
 import { useParams } from 'react-router-dom';
 import { Title, CastList, CastItem, Block, Image, Text } from './Cast.styled';
 import PropTypes from 'prop-types';
-import { Loader } from 'components/Loader/Loader';
+// import { Loader } from 'components/Loader/Loader';
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
@@ -44,10 +45,10 @@ export function Cast() {
                                 alt={cast.name}
                             />
                         ) : (
-                            <Loader />
+                            <Image src='https://via.placeholder.com/100x150' alt='image not found' />
                         )}
                         <h4>{cast.name}</h4>
-                        <Text>Character: {cast.character}</Text>
+                        <Text>{cast.character ? `Character:${cast.character}` : ''}</Text>
                     </CastItem>
                 ))}
             </CastList>
