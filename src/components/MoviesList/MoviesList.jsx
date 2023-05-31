@@ -10,7 +10,7 @@ export function MoviesList({ id, title, poster_path }) {
   return (
     <MovieItem key={id}>
       <LinkStyled to={`/movies/${id}`} state={{ from: location }}>
-        { poster_path ? <Image src={`${TheMovieDbAPI.IMG_URL + poster_path}`} alt={title} /> : <img src='https://via.placeholder.com/270x400' alt='image not found' />}        
+        { poster_path ? <Image src={`${TheMovieDbAPI.IMG_URL + poster_path}`} alt={title} /> : <Image src='https://via.placeholder.com/270x400' alt='image not found' />}        
         <Title>{title}</Title>
       </LinkStyled>
     </MovieItem>
