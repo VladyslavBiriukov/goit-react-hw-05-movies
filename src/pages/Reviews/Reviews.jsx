@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
-export function Reviews() {
+  function Reviews() {
 
     const [reviews, setReviews] = useState([]);
     const [error, setError] = useState(null);
@@ -52,3 +52,5 @@ export function Reviews() {
 Reviews.propTypes = {
     moviesId: PropTypes.number,
 };
+
+export default Reviews;

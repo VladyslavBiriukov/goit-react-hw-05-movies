@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 const theMovieDbAPI = new TheMovieDbAPI();
 
-export function Cast() {
+function Cast() {
 
     const [cast, setCast] = useState([]);
     const [error, setError] = useState('');
@@ -61,3 +61,5 @@ export function Cast() {
 Cast.propTypes = {
     moviesId: PropTypes.number,
 };
+
+export default Cast;
